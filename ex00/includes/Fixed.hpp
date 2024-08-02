@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:49:09 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/07/31 17:27:41 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/03 02:43:41 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	Fixed{
 		int	getRawBits(void) const;
 		void setRawBits(int const raw);
 	private:
-		int	_fp;
-		static const int _bits = 8;
+		int	__fixed_point;
+		static const int __scaling = 8;
 };
 #endif
