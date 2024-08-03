@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 15:03:28 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/03 14:39:32 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/03 15:26:36 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,20 @@ Fixed Fixed::operator-(Fixed const &s)
 Fixed Fixed::operator*(Fixed const &s)
 {
 	Fixed ret(*this);
-	ret.__fixed_point *= s.__fixed_point;	
+	int	result;
+	
+	result = (__fixed_point * s.__fixed_point) >> __scaling;
+	ret.setRawBits(result);
 	return (ret);
-
 }
 
 Fixed Fixed::operator/(Fixed const &s)
 {
 	Fixed ret(*this);
-	ret.__fixed_point /= s.__fixed_point;	
+	int	result;
+	
+	result = (__fixed_point / s.__fixed_point) >> __scaling;
+	ret.setRawBits(result);
 	return (ret);
 }
 // comparison operators
