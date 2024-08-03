@@ -6,7 +6,7 @@
 #    By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/26 03:46:13 by dbarrene          #+#    #+#              #
-#    Updated: 2024/08/03 04:30:09 by dbarrene         ###   ########.fr        #
+#    Updated: 2024/08/03 16:19:18 by dbarrene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = FixedClass
 
 COMP = c++
 
-COMPFLAGS = -Wall -Wextra -Werror -pedantic -fsanitize=address -g
+COMPFLAGS = -Wall -Wextra -Werror -pedantic #-fsanitize=address -g
 
 SRCDIR = srcs
 OBJDIR = obj

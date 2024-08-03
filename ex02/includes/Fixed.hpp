@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:49:09 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/03 04:40:53 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/03 18:12:33 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef FIXED_HPP
@@ -28,24 +28,28 @@ class	Fixed{
 		void	setRawBits(int const raw);
 		int		toInt( void ) const;
 		float	toFloat( void ) const;
-		static int& min(int& a, int& b);
-		static int& max(int& a, int& b);
-		static const int& min(const int& a, const int& b);
-		static const int& max(const int& a, const int& b);
+		static Fixed& min(Fixed& a, Fixed& b);
+		static Fixed& max(Fixed& a, Fixed& b);
+		static const Fixed& min(const Fixed& a, const Fixed& b);
+		static const Fixed& max(const Fixed& a, const Fixed& b);
 		// overloads
 		Fixed&	operator=(Fixed const & s);
-		bool	operator>(Fixed const & s);
-		bool	operator<(Fixed const & s);
-		bool	operator>=(Fixed const & s);
-		bool	operator<=(Fixed const & s);
-		bool	operator==(Fixed const & s);
-		bool	operator!=(Fixed const & s);
-		Fixed	operator+(Fixed const & s);
-		Fixed	operator-(Fixed const & s);
-		Fixed	operator*(Fixed const & s);
-		Fixed	operator/(Fixed const & s);
-		Fixed&	operator++(int fp);
-		Fixed&	operator--(int fp);
+		bool	operator>(Fixed const & s) const;
+		bool	operator<(Fixed const & s) const;
+		bool	operator>=(Fixed const & s) const;
+		bool	operator<=(Fixed const & s) const;
+		bool	operator==(Fixed const & s) const;
+		bool	operator!=(Fixed const & s) const;
+		Fixed	operator+(Fixed const & s) const;
+		Fixed	operator-(Fixed const & s) const;
+		Fixed	operator*(Fixed const & s) const;
+		Fixed	operator/(Fixed const & s) const;
+		// Preincrement returns modified reference to object
+		Fixed&	operator--();
+		Fixed&	operator++();
+		// Post increment returns copy of object but increments the original
+		Fixed	operator--(int);
+		Fixed	operator++(int);
 	private:
 		int	__fixed_point;
 		static const int __scaling = 8;
