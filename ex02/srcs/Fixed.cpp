@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 15:03:28 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/03 03:42:51 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/03 04:38:07 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,3 +65,32 @@ Fixed &Fixed::operator=(Fixed const &s){
 	this->__fixed_point = s.getRawBits();
 	return *this;
 }
+// arithmetic operators
+Fixed Fixed::operator+(Fixed const &s)
+{
+	Fixed ret(*this);
+	ret.__fixed_point += s.__fixed_point;	
+	return (ret);
+}
+
+Fixed Fixed::operator-(Fixed const &s)
+{
+	Fixed ret(*this);
+	ret.__fixed_point -= s.__fixed_point;	
+	return (ret);
+}
+
+Fixed Fixed::operator*(Fixed const &s)
+{
+	Fixed ret(*this);
+	ret.__fixed_point *= s.__fixed_point;	
+	return (ret);
+
+}
+Fixed Fixed::operator/(Fixed const &s)
+{
+	Fixed ret(*this);
+	ret.__fixed_point /= s.__fixed_point;	
+	return (ret);
+}
+// comparison operators
