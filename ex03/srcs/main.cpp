@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 16:56:53 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/08 19:07:16 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/09 00:35:41 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,15 @@
 
 int	main(void)
 {
-	Point a(1.2f,2.2f);
-	Point b(3.4f,1.7f);
-	Point c(6.9f,4.2f);
-	Point p(42.1f,30.1f);
-	Point x(5.4f, 3.2f);
-	bsp(a,b,c,x);
+	// vertices of triangle
+	Point a(2.0f, 0);
+	Point b(0,0);
+	Point c(2.0f, 1.0f);
+	// points to check;
+	Point p(1, 0);
+	Point x(1.2f, 0.4f);
+	std::cout << "result of bsp: " << bsp(a,b,c,c) << std::endl;
+	std::cout << "result of bsp: " << bsp(a,b,c,p) << std::endl;
+	std::cout << "result of bsp: " << bsp(a,b,c,x) << std::endl;
 	return 0;
 }
