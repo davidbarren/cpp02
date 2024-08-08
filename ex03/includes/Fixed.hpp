@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:49:09 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/03 18:12:33 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/08 18:23:44 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef FIXED_HPP
@@ -33,7 +33,7 @@ class	Fixed{
 		static const Fixed& min(const Fixed& a, const Fixed& b);
 		static const Fixed& max(const Fixed& a, const Fixed& b);
 		// overloads
-		Fixed&	operator=(Fixed const & s);
+		const	Fixed&	operator=(Fixed const & s);
 		bool	operator>(Fixed const & s) const;
 		bool	operator<(Fixed const & s) const;
 		bool	operator>=(Fixed const & s) const;
