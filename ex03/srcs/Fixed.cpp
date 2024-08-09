@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 15:03:28 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/08 18:29:34 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/09 18:12:53 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Fixed::Fixed(const int num) : __fixed_point(num << __scaling)
 {
 //	std::cout << "Int constructor called" << std::endl;
 }
-Fixed::Fixed(const float num) : __fixed_point(num * (float) (1 << __scaling))
+Fixed::Fixed(const float num) : __fixed_point(roundf(num * (1 << __scaling)))
 {
 //	std::cout << "Float constructor called" << std::endl;
 }

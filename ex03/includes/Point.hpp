@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 15:05:44 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/08 23:46:34 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/09 15:52:52 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef POINT_HPP
@@ -25,7 +25,6 @@ class Point{
 		Point& operator=(const Point &other);
 		const Fixed x;
 		const Fixed y;
-		// maybe add more things??
 };
 bool bsp(Point const a, Point const b, Point const c, Point const point);
 #endif

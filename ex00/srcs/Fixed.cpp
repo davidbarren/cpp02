@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 15:03:28 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/03 02:51:41 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/09 18:17:23 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ Fixed::Fixed() : __fixed_point(0){
 Fixed::Fixed(Fixed const &s)
 {
 	std::cout << "Copy Constructor Called" << std::endl;
-	this->__fixed_point = s.getRawBits();
+	*this = s;
+//	this->__fixed_point = s.__fixed_point;
 }
 Fixed::~Fixed(){
 	std::cout << "Destructor Called" << std::endl;

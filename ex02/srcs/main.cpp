@@ -6,7 +6,7 @@
 /*   By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 16:56:53 by dbarrene          #+#    #+#             */
-/*   Updated: 2024/08/03 18:18:06 by dbarrene         ###   ########.fr       */
+/*   Updated: 2024/08/09 16:18:24 by dbarrene         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ int	main(void)
 	std::cout << "max function (const &) with c and d: " << a.max(c, d) << std::endl;
 	std::cout << "min function with a and b: " << a.min(a, b) << std::endl;
 	std::cout << "min function (const &) with c and d: " << a.min(c, d) << std::endl;
+
 	return 0;
 }
